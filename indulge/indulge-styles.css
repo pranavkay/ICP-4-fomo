@@ -1,0 +1,464 @@
+/* ==========================================================================
+   FOMO Cookies - Indulge Landing Page Styles
+   For Gen Z Indulgence Seekers + Health-Conscious Professionals
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Dark Theme Base
+   -------------------------------------------------------------------------- */
+.dark-theme {
+    background: var(--color-warm-black);
+}
+
+/* --------------------------------------------------------------------------
+   Indulge Hero
+   -------------------------------------------------------------------------- */
+.indulge-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--color-warm-black);
+}
+
+.indulge-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.indulge-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.indulge-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(180deg,
+            rgba(26, 20, 18, 0.5) 0%,
+            rgba(26, 20, 18, 0.3) 40%,
+            rgba(26, 20, 18, 0.7) 100%);
+}
+
+.indulge-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    padding: var(--space-8);
+}
+
+.indulge-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-6);
+    text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+}
+
+.indulge-hero-title .highlight {
+    display: block;
+    color: var(--color-burnt-caramel);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.indulge-hero-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 400;
+    color: rgba(250, 249, 247, 0.9);
+    margin-bottom: var(--space-10);
+    line-height: 1.6;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Paradox Section
+   -------------------------------------------------------------------------- */
+.indulge-paradox {
+    background: var(--color-deep-chocolate);
+    padding: var(--space-24) 0;
+    text-align: center;
+}
+
+.paradox-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.paradox-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-6);
+    line-height: 1.2;
+}
+
+.paradox-title .highlight {
+    color: var(--color-burnt-caramel);
+    font-style: italic;
+}
+
+.paradox-text {
+    font-size: 1.25rem;
+    color: rgba(250, 249, 247, 0.85);
+    line-height: 1.8;
+}
+
+.paradox-text strong {
+    color: var(--color-burnt-caramel);
+}
+
+/* --------------------------------------------------------------------------
+   Two Paths Section
+   -------------------------------------------------------------------------- */
+.indulge-paths {
+    background: var(--color-warm-black);
+    padding: var(--space-24) 0;
+}
+
+.path-section {
+    margin-bottom: var(--space-16);
+}
+
+.path-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.path-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--space-4);
+}
+
+.path-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-3);
+}
+
+.path-subtitle {
+    font-size: 1.125rem;
+    color: rgba(250, 249, 247, 0.75);
+}
+
+/* Path Divider */
+.path-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+    margin: var(--space-16) 0;
+}
+
+.divider-line {
+    height: 1px;
+    width: 100px;
+    background: linear-gradient(90deg, transparent, rgba(250, 249, 247, 0.3), transparent);
+}
+
+.divider-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: rgba(250, 249, 247, 0.5);
+    font-style: italic;
+}
+
+/* Dark Product Cards */
+.product-card.dark {
+    background: var(--color-deep-chocolate);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-card.dark .product-info {
+    color: var(--color-warm-white);
+}
+
+.product-card.dark .product-info h4 {
+    color: var(--color-warm-white);
+}
+
+.product-card.dark .product-info p {
+    color: rgba(250, 249, 247, 0.75);
+}
+
+.product-card.dark .product-price {
+    color: var(--color-burnt-caramel);
+}
+
+/* Light Product Cards */
+.product-card.light {
+    background: var(--color-warm-white);
+    border: 1px solid var(--color-soft-sand);
+}
+
+/* Badge Variations */
+.product-badge.hot {
+    background: #ff6b6b;
+}
+
+.product-badge.unique {
+    background: #4ecdc4;
+}
+
+.persona-badge.indulgence {
+    border-color: #ff6b6b;
+}
+
+.persona-badge.health {
+    border-color: #4ecdc4;
+}
+
+/* --------------------------------------------------------------------------
+   Transparency Section
+   -------------------------------------------------------------------------- */
+.indulge-transparency {
+    background: var(--color-cream);
+    padding: var(--space-24) 0;
+}
+
+.transparency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+}
+
+.transparency-card {
+    padding: var(--space-10);
+    border-radius: var(--radius-xl);
+}
+
+.transparency-card.positive {
+    background: rgba(78, 205, 196, 0.1);
+    border: 2px solid rgba(78, 205, 196, 0.3);
+}
+
+.transparency-card.negative {
+    background: rgba(255, 107, 107, 0.1);
+    border: 2px solid rgba(255, 107, 107, 0.3);
+}
+
+.transparency-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    margin-bottom: var(--space-6);
+    color: var(--color-deep-chocolate);
+}
+
+.transparency-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.transparency-card li {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    padding-left: var(--space-4);
+    position: relative;
+}
+
+.transparency-card.positive li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4ecdc4;
+    font-weight: 600;
+}
+
+.transparency-card.negative li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .transparency-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Social Proof Section
+   -------------------------------------------------------------------------- */
+.indulge-social {
+    position: relative;
+    padding: var(--space-24) 0;
+    overflow: hidden;
+}
+
+.indulge-social-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.indulge-social-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.indulge-social-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: rgba(26, 20, 18, 0.9);
+}
+
+.indulge-social .container {
+    position: relative;
+    z-index: 3;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.social-card {
+    background: rgba(250, 249, 247, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(250, 249, 247, 0.15);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+    background: rgba(250, 249, 247, 0.12);
+}
+
+.social-image {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.social-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-card p {
+    padding: var(--space-4);
+    font-size: var(--text-small);
+    color: var(--color-warm-white);
+    line-height: 1.6;
+}
+
+.social-handle {
+    display: block;
+    padding: 0 var(--space-4) var(--space-4);
+    font-size: var(--text-micro);
+    color: var(--color-burnt-caramel);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .social-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   CTA Split Section
+   -------------------------------------------------------------------------- */
+.indulge-cta {
+    background: var(--color-warm-black);
+    padding: var(--space-16) 0;
+}
+
+.cta-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+}
+
+.cta-box {
+    padding: var(--space-12);
+    border-radius: var(--radius-xl);
+    text-align: center;
+}
+
+.cta-box.indulgence-cta {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.2) 0%, rgba(255, 107, 107, 0.05) 100%);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.cta-box.health-cta {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.2) 0%, rgba(78, 205, 196, 0.05) 100%);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.cta-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--space-4);
+}
+
+.cta-box h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-2);
+}
+
+.cta-box p {
+    color: rgba(250, 249, 247, 0.75);
+    margin-bottom: var(--space-6);
+}
+
+@media (max-width: 768px) {
+    .cta-split {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Dark Footer
+   -------------------------------------------------------------------------- */
+.dark-footer {
+    background: var(--color-deep-chocolate);
+}
+
+.dark-footer p,
+.dark-footer a {
+    color: rgba(250, 249, 247, 0.75);
+}
+
+.dark-footer a:hover {
+    color: var(--color-warm-white);
+}
+
+.dark-footer h4 {
+    color: var(--color-warm-white);
+}

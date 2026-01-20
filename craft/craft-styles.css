@@ -1,0 +1,513 @@
+/* ==========================================================================
+   FOMO Cookies - Craft Landing Page Styles
+   For Artisanal Appreciators
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Craft Hero
+   -------------------------------------------------------------------------- */
+.craft-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.craft-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.craft-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.craft-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(135deg,
+            rgba(26, 20, 18, 0.6) 0%,
+            rgba(26, 20, 18, 0.4) 50%,
+            rgba(26, 20, 18, 0.7) 100%);
+}
+
+.craft-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    padding: var(--space-8);
+}
+
+.hero-label {
+    font-family: var(--font-body);
+    font-size: var(--text-micro);
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-burnt-caramel);
+    margin-bottom: var(--space-6);
+    display: block;
+}
+
+.craft-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-6);
+    text-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+}
+
+.craft-hero-title .highlight {
+    color: var(--color-burnt-caramel);
+    font-style: italic;
+}
+
+.craft-hero-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    color: rgba(250, 249, 247, 0.85);
+    margin-bottom: var(--space-10);
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Philosophy Section
+   -------------------------------------------------------------------------- */
+.craft-philosophy {
+    background: var(--color-cream);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.philosophy-content {
+    max-width: 500px;
+}
+
+.philosophy-text {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+}
+
+.philosophy-text strong {
+    color: var(--color-deep-chocolate);
+}
+
+.philosophy-image {
+    position: relative;
+}
+
+.philosophy-image img {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+.philosophy-badge {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-deep-chocolate);
+    color: var(--color-warm-white);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
+    display: flex;
+    gap: var(--space-4);
+    font-size: var(--text-small);
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+}
+
+.philosophy-badge span {
+    position: relative;
+}
+
+.philosophy-badge span:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: calc(var(--space-4) * -1 + 4px);
+    color: var(--color-burnt-caramel);
+}
+
+@media (max-width: 968px) {
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .philosophy-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Process Timeline
+   -------------------------------------------------------------------------- */
+.craft-process {
+    background: var(--color-warm-white);
+}
+
+.process-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+    margin-top: var(--space-12);
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: var(--space-10);
+    align-items: center;
+}
+
+.process-step.reverse {
+    grid-template-columns: 1fr 1fr auto;
+}
+
+.process-step.reverse .process-number {
+    order: 3;
+}
+
+.process-step.reverse .process-content {
+    order: 2;
+    text-align: right;
+}
+
+.process-step.reverse .process-image {
+    order: 1;
+}
+
+.process-number {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 400;
+    color: var(--color-soft-sand);
+    line-height: 1;
+    opacity: 0.7;
+}
+
+.process-content h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    margin-bottom: var(--space-3);
+    color: var(--color-deep-chocolate);
+}
+
+.process-content p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.process-image {
+    max-width: 350px;
+}
+
+.process-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 968px) {
+
+    .process-step,
+    .process-step.reverse {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .process-step .process-number,
+    .process-step.reverse .process-number {
+        order: 0;
+    }
+
+    .process-step .process-content,
+    .process-step.reverse .process-content {
+        order: 1;
+        text-align: center;
+    }
+
+    .process-step .process-image,
+    .process-step.reverse .process-image {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .process-number {
+        font-size: 4rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Ingredients Section
+   -------------------------------------------------------------------------- */
+.craft-ingredients {
+    position: relative;
+    padding: var(--space-24) 0;
+    overflow: hidden;
+}
+
+.craft-ingredients-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.craft-ingredients-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.craft-ingredients-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(180deg,
+            rgba(26, 20, 18, 0.85) 0%,
+            rgba(26, 20, 18, 0.9) 100%);
+}
+
+.craft-ingredients .container {
+    position: relative;
+    z-index: 3;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.ingredient-card {
+    background: rgba(250, 249, 247, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(250, 249, 247, 0.15);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.ingredient-card:hover {
+    background: rgba(250, 249, 247, 0.12);
+    transform: translateY(-4px);
+}
+
+.ingredient-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+}
+
+.ingredient-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-2);
+}
+
+.ingredient-card p {
+    font-size: var(--text-small);
+    color: rgba(250, 249, 247, 0.75);
+    line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+    .ingredients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .ingredients-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Artisan Favorites
+   -------------------------------------------------------------------------- */
+.craft-favorites {
+    background: var(--color-cream);
+}
+
+.persona-badge {
+    position: absolute;
+    bottom: var(--space-3);
+    left: var(--space-3);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-deep-chocolate);
+    font-size: var(--text-micro);
+    font-weight: 500;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+}
+
+.persona-badge.artisan {
+    border: 1px solid var(--color-burnt-caramel);
+}
+
+.persona-badge.indulgence {
+    border: 1px solid #ff6b6b;
+}
+
+.persona-badge.health {
+    border: 1px solid #4ecdc4;
+}
+
+.persona-badge.gifting {
+    border: 1px solid #a855f7;
+}
+
+/* --------------------------------------------------------------------------
+   Founder Story
+   -------------------------------------------------------------------------- */
+.craft-story {
+    background: var(--color-warm-white);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.story-image {
+    position: relative;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+.story-quote {
+    position: absolute;
+    bottom: var(--space-6);
+    left: var(--space-6);
+    right: var(--space-6);
+    background: var(--color-deep-chocolate);
+    color: var(--color-warm-white);
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-style: italic;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.story-content p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+}
+
+@media (max-width: 968px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .story-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .story-content {
+        text-align: center;
+    }
+
+    .story-content .btn {
+        margin: 0 auto;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   CTA Section
+   -------------------------------------------------------------------------- */
+.craft-cta {
+    position: relative;
+    padding: var(--space-24) 0;
+    overflow: hidden;
+}
+
+.craft-cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.craft-cta-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.craft-cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(180deg,
+            rgba(26, 20, 18, 0.8) 0%,
+            rgba(26, 20, 18, 0.9) 100%);
+}
+
+.craft-cta .container {
+    position: relative;
+    z-index: 3;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-4);
+}
+
+.cta-content p {
+    font-size: 1.125rem;
+    color: rgba(250, 249, 247, 0.85);
+    margin-bottom: var(--space-8);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
