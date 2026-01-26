@@ -3,6 +3,9 @@
    Using GSAP ScrollTrigger for smooth parallax and reveals
    ========================================================================== */
 
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 // Wait for DOM
 document.addEventListener('DOMContentLoaded', () => {
     // Register GSAP plugins
