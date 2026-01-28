@@ -1,0 +1,250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_JjTWDc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_AkDztC": {
+          "type": "heading",
+          "settings": {
+            "heading": "FOMO Bakery",
+            "heading_size": "h1"
+          }
+        },
+        "text_WtCfWE": {
+          "type": "text",
+          "settings": {
+            "text": "Our Mission is to create delicious snacks and food products that are made of natural ingredients available in any kitchen. We believe that food should not be factory made, instead we bring products made fresh, every day to shelves near you.",
+            "text_style": "body"
+          }
+        },
+        "buttons_GHXnjC": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AkDztC",
+        "text_WtCfWE",
+        "buttons_GHXnjC"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/fleamarket-fomo-bakery-ed.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "top-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_3GRRGm": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9RnUP6": {
+          "type": "column",
+          "settings": {
+            "title": "Anne Priyanka",
+            "text": "<p>A fashionista turned food entrepreneur- our resident CEO of Cookies. Her main aim is to bring the luxury lifestyle to the world of snacks.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_a6VeBK": {
+          "type": "column",
+          "settings": {
+            "title": "Pranav Kay",
+            "text": "<p>Pk is a designer and serial founder who has created several iconic IPs like Big Mushroom Cloud Festival and Mouth of Word.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TLBKfb": {
+          "type": "column",
+          "settings": {
+            "title": "Prashanth Nataraj",
+            "text": "<p>Prashanth is a Carnegie Melon alumni who has worked at PWC, Meta and Doordash.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9RnUP6",
+        "column_a6VeBK",
+        "column_TLBKfb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Meet the Team",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_iEE48p": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Fi3eAb": {
+          "type": "heading",
+          "settings": {
+            "heading": "We're trying to be the best in Bangalore and we can't do it without you.",
+            "heading_size": "h1"
+          }
+        },
+        "text_gP6nz6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As OG Bangaloreans, we were proud of our bakery and snacks culture. We truly believe we have some of the best in the world. Entertaining guests, hanging out with friends or a quick burst of energy after a workout- snacks are an important part of our life.<br/>We've specifically chosen to start with cookies but are sure to bring a lot more products to your homes. Our current focus is to get great tasting cookies that use no preservatives, no chemicals and the perfect balance of sweetness and flavor.</p>"
+          }
+        },
+        "button_7FnKEC": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fi3eAb",
+        "text_gP6nz6",
+        "button_7FnKEC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_abi3Aj": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_j4Hy9A": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How to Order FOMO Cookies?",
+            "icon": "check_mark",
+            "row_content": "<p><strong>The easiest way to order FOMO Cookies is the online shop. You will have to create an account with your name, address and other details so it becomes easy for us to ship it right over. Please note, we only deliver in Bangalore, India.</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_39TfEn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do the cookies last?",
+            "icon": "check_mark",
+            "row_content": "<p>We print a 10 day expiry on our boxes, but cookies are famous for how long you can store them. They last up to 30 days if refrigerated.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hjyMDk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I gift FOMO Cookies?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes, absolutely. FOMO cookies for corporate gifting makes complete sense. You can simply place an order and get delivery to your office.</p><p>If you need to gift to a friend, you can simply put their address as the delivery address. FOMO cookies are the best home delivered choco chip cookies in Bangalore.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Tpgbdj": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_j4Hy9A",
+        "collapsible_row_39TfEn",
+        "collapsible_row_hjyMDk",
+        "collapsible_row_Tpgbdj"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Please leave a message for Bulk Orders or Events",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_JjTWDc",
+    "main",
+    "multicolumn_3GRRGm",
+    "rich_text_iEE48p",
+    "collapsible_content_abi3Aj",
+    "form"
+  ]
+}
