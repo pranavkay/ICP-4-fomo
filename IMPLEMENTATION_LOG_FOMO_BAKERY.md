@@ -540,3 +540,16 @@ Status: ACTIVE — executing Sprint 0 now
 - Decision log:
   - Branch strategy: `rebuild/v2` for demo/staging, `main` for production. Merge on client sign-off.
   - Form backend: Shopify native > Formspree. Keeps stack simpler, data in one place.
+
+---
+
+## 2026-03-15 — Vercel Deployment + Merge to Main
+
+- Completed:
+  - [DONE] Connected repo to Vercel for team preview. Live at: https://icp-4-fomo.vercel.app/
+  - [DONE] Vercel only deploys from `main` (no branch preview on current Vercel plan).
+  - [DONE] Merged `rebuild/v2` → `main` via fast-forward (commit `8bf701f`). No conflicts.
+  - [DONE] Pushed `main` to origin. Vercel auto-redeploy triggered.
+- Decision log:
+  - Merged early to unblock Vercel deployment. Both Vercel and GitHub Pages now serve Sprint 1 build from `main`.
+  - Future work continues on `rebuild/v2`, merged to `main` as needed.

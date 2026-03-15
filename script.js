@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 revealItems.forEach(item => {
                     const style = window.getComputedStyle(item);
                     if (style.opacity === '0') {
-                        console.warn("GSAP Fallback: Forcing visibility on", item);
                         gsap.to(item, { opacity: 1, y: 0, duration: 0.5 });
                     }
                 });

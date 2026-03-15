@@ -241,3 +241,9 @@ while preserving brand distinctiveness and operational reliability.
   - `rebuild/v2` — all Sprint 1 work, for client demo.
   - `main` — old live site, untouched. GitHub Pages deploys from main only.
   - Merge `rebuild/v2` → `main` on client sign-off to go live.
+
+### 2026-03-15 — Vercel Deploy + Merge to Main
+- [DONE] Vercel connected to repo — live at https://icp-4-fomo.vercel.app/
+- [DONE] Vercel deploys from `main` only (no branch preview available in current plan).
+- [DONE] Merged `rebuild/v2` → `main` (fast-forward) so Vercel serves Sprint 1 build.
+- [DONE] [SUPERSEDED] Branch strategy updated: ~~main untouched until client sign-off~~ → main now has Sprint 1 code, deployed on both Vercel and GitHub Pages.
