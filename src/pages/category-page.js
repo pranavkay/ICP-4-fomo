@@ -34,8 +34,11 @@ import { fetchCollection, fetchProducts } from '../lib/shopify.js';
 import { addToCart, getCart, getCartTotals, getCheckoutUrl, updateQuantity } from '../lib/cart.js';
 import { initAnimations } from '../lib/ui.js';
 import { initProductView } from '../lib/product-view.js';
+import { injectFooter } from '../components/footer.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
+    injectFooter();
+
     const CONFIG = window.CATEGORY_CONFIG;
     if (!CONFIG) {
         console.error('CATEGORY_CONFIG not set on this page.');

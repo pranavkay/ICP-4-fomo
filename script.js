@@ -15,6 +15,7 @@ import {
     getCheckoutUrl,
     getSingleCheckoutUrl
 } from './src/lib/cart.js';
+import { injectFooter } from './src/components/footer.js';
 
 // Wait for DOM
 document.addEventListener('DOMContentLoaded', async () => {
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Initialize Animations FIRST (Critical for UI visibility)
     initAnimations();
+
+    // Inject shared footer
+    injectFooter();
 
     // Initialize Data & Interactivity
     let allProducts = [];
