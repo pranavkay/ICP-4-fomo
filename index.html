@@ -4,9 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOMO Cookies | Handcrafted Artisanal Cookies in Bangalore</title>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-39E6NXKX8R"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-39E6NXKX8R');</script>
+    <title>FOMO Bakery | Artisanal Baked Goods in Bangalore</title>
     <meta name="description"
-        content="Handcrafted cookies made with love. No shortcuts. No preservatives. Artisanal cookies delivered fresh in Bangalore.">
+        content="FOMO Bakery — handcrafted doughnuts, bomboloni, cookies, cupcakes & celebration cakes made fresh in Bangalore. Real butter. No preservatives. Order online.">
+    <meta name="keywords"
+        content="artisan bakery Bangalore, doughnuts Bangalore, bomboloni, handmade cookies, cupcakes, celebration cakes, fresh bakery delivery Bangalore">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FOMO Bakery | Artisanal Baked Goods in Bangalore">
+    <meta property="og:description" content="FOMO Bakery — handcrafted doughnuts, bomboloni, cookies, cupcakes & celebration cakes made fresh in Bangalore. Real butter. No preservatives. Order online.">
+    <meta property="og:image" content="https://fomobakery.com/assets/fomo-logo.png">
+    <meta property="og:url" content="https://fomobakery.com/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- JSON-LD: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": "FOMO Bakery",
+        "description": "Handcrafted doughnuts, bomboloni, cookies, cupcakes & celebration cakes made fresh in Bangalore. Real butter. No preservatives.",
+        "url": "https://fomobakery.com",
+        "logo": "https://fomobakery.com/assets/fomo-logo.png",
+        "image": "https://fomobakery.com/assets/fomo-logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+        },
+        "priceRange": "₹₹",
+        "servesCuisine": "Bakery",
+        "hasMenu": "https://fomobakery.com/shop/",
+        "sameAs": [
+            "https://instagram.com/fomobakery"
+        ]
+    }
+    </script>
 
     <!-- Fonts: Fraunces + Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,156 +53,258 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="product-view.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="main-nav">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="assets/fomo-logo.png" alt="FOMO Cookies" class="logo-img">
+            <a href="index.html" class="logo">
+                <img src="assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="craft/index.html">The Craft</a></li>
                 <li><a href="indulge/index.html">Indulge</a></li>
                 <li><a href="gifts/index.html">Gifts</a></li>
-                <li><a href="#cookies">Cookies</a></li>
-                <li><a href="products/template.html">Product Page</a></li>
+                <li><a href="#categories">Shop</a></li>
+                <li><a href="pages/occasions.html">Occasions</a></li>
+                <li><a href="pages/corporate.html">Corporate</a></li>
             </ul>
             <a href="#order" class="nav-cta">Order Now</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
+        <!-- Mobile Nav Panel -->
+        <div class="mobile-nav-panel" id="mobile-nav-panel">
+            <ul>
+                <li><a href="craft/index.html">The Craft</a></li>
+                <li><a href="indulge/index.html">Indulge</a></li>
+                <li><a href="gifts/index.html">Gifts</a></li>
+                <li><a href="#categories">Shop</a></li>
+                <li><a href="pages/occasions.html">Occasions</a></li>
+                <li><a href="pages/corporate.html">Corporate</a></li>
+                <li><a href="#order" class="mobile-nav-cta">Order Now</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Hero Section: Full-Screen Video Background -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         HERO — Full-screen cinematic bakery image
+    ═══════════════════════════════════════════════════════════════ -->
     <section class="hero-fullscreen">
-        <!-- Video Background (replace src when videos are ready) -->
         <div class="hero-video-container">
-            <!-- Placeholder image until video is ready -->
-            <img src="assets/hero-cookies.png" alt="" class="hero-bg-image" id="hero-fallback">
-            <!-- Video will be added here:
-            <video class="hero-video" autoplay muted loop playsinline id="hero-video">
-                <source src="assets/videos/bakery-timelapse.mp4" type="video/mp4">
-            </video>
-            -->
+            <img src="assets/hero-cookies.png" alt="FOMO Bakery — artisan baked goods" class="hero-bg-image"
+                id="hero-fallback">
         </div>
-
-        <!-- Dark Overlay for Text Readability -->
         <div class="hero-overlay"></div>
 
-        <!-- Centered Content -->
         <div class="hero-center-content">
-            <p class="hero-tagline-center">Slow Indulgence</p>
+            <p class="hero-tagline-center">From our kitchen to your table</p>
             <h1 class="hero-title-center">
-                Handcrafted cookies<br>
-                made with love.<br>
+                Baked fresh.<br>
+                Made with love.<br>
                 <span class="highlight">No shortcuts.</span>
             </h1>
             <p class="hero-subtitle-center">
-                Small-batch cookies baked fresh in Bangalore.<br>
-                Real butter. Natural ingredients. Zero preservatives.
+                Doughnuts, bomboloni, cookies, cupcakes & celebration cakes.<br>
+                Small-batch. Real butter. Zero preservatives. Bangalore delivery.
             </p>
             <div class="hero-ctas-center">
-                <a href="#order" class="btn btn-primary btn-glow">Order Now</a>
-                <a href="#craft" class="btn btn-ghost">Discover The Craft</a>
+                <a href="#categories" class="btn btn-glow btn-large">Explore All</a>
+                <a href="#order" class="btn btn-ghost btn-large">Order Now</a>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
             <span>Scroll</span>
             <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- Persona Quick Nav -->
-    <section class="persona-nav reveal-section">
+    <!-- ═══════════════════════════════════════════════════════════════
+         TRUST BAR
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="trust-bar">
         <div class="container">
-            <div class="persona-cards">
-                <a href="craft/index.html" class="persona-card reveal-item">
-                    <div class="persona-icon">✦</div>
-                    <h3>The Craft</h3>
-                    <p>For those who appreciate artisanal intention</p>
+            <div class="trust-items">
+                <div class="trust-item">
+                    <span class="trust-icon">🥐</span>
+                    <span>Baked Fresh Daily</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-icon">🛵</span>
+                    <span>Bangalore Delivery</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-icon">🧈</span>
+                    <span>Real Butter Always</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-icon">✦</span>
+                    <span>Zero Preservatives</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         CATEGORY JUMP GRID — 6 categories
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="categories" class="section section-categories">
+        <div class="container">
+            <div class="section-header reveal-item" style="text-align:center; margin-bottom: var(--space-12);">
+                <span class="section-label" style="justify-content:center;">What We Make</span>
+                <h2 class="section-title">Every Day, By Hand</h2>
+                <p class="section-subtitle">Six categories. Infinite reasons to indulge.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- Doughnuts -->
+                <a href="categories/doughnuts.html" class="category-card reveal-item" data-category="doughnuts">
+                    <div class="category-card-image">
+                        <img src="assets/hero-doughnuts-card.png" alt="Artisan Doughnuts">
+                        <div class="category-card-overlay"></div>
+                    </div>
+                    <div class="category-card-body">
+                        <span class="category-accent" style="color: var(--color-category-doughnuts);">🍩</span>
+                        <h3>Doughnuts</h3>
+                        <p>Glazed, filled, sprinkled — each one a small joy.</p>
+                        <span class="category-cta">Shop Doughnuts →</span>
+                    </div>
                 </a>
-                <a href="indulge/index.html" class="persona-card reveal-item">
-                    <div class="persona-icon">◆</div>
-                    <h3>Indulge</h3>
-                    <p>Real ingredients. Real taste. No regrets.</p>
+
+                <!-- Bomboloni -->
+                <a href="categories/bomboloni.html" class="category-card reveal-item" data-category="bomboloni">
+                    <div class="category-card-image">
+                        <img src="assets/hero-bomboloni-card.png" alt="Bomboloni">
+                        <div class="category-card-overlay"></div>
+                    </div>
+                    <div class="category-card-body">
+                        <span class="category-accent" style="color: var(--color-category-bomboloni);">🫐</span>
+                        <h3>Bomboloni</h3>
+                        <p>Italian-style filled doughnuts. Pillowy, rich, unforgettable.</p>
+                        <span class="category-cta">Shop Bomboloni →</span>
+                    </div>
                 </a>
-                <a href="gifts/index.html" class="persona-card reveal-item">
-                    <div class="persona-icon">❖</div>
-                    <h3>Gift</h3>
-                    <p>Make moments memorable</p>
+
+                <!-- Cookies -->
+                <a href="categories/cookies.html" class="category-card reveal-item" data-category="cookies">
+                    <div class="category-card-image">
+                        <img src="assets/Pouch/Choco-chip/1.jpg" alt="Artisanal Cookies">
+                        <div class="category-card-overlay"></div>
+                    </div>
+                    <div class="category-card-body">
+                        <span class="category-accent" style="color: var(--color-category-cookies);">🍪</span>
+                        <h3>Cookies</h3>
+                        <p>Persian Love to Double Chocolate — slow-baked, small-batch.</p>
+                        <span class="category-cta">Shop Cookies →</span>
+                    </div>
+                </a>
+
+                <!-- Salt Breads -->
+                <a href="categories/salt-breads.html" class="category-card reveal-item" data-category="salt-breads">
+                    <div class="category-card-image">
+                        <img src="assets/hero-salt-breads-card.png" alt="Salt Breads">
+                        <div class="category-card-overlay"></div>
+                    </div>
+                    <div class="category-card-body">
+                        <span class="category-accent" style="color: var(--color-category-salt-breads);">🥖</span>
+                        <h3>Salt Breads</h3>
+                        <p>Rustic, crusty, buttery. For the bread lover in you.</p>
+                        <span class="category-cta">Shop Breads →</span>
+                    </div>
+                </a>
+
+                <!-- Cupcakes -->
+                <a href="categories/cupcakes.html" class="category-card reveal-item" data-category="cupcakes">
+                    <div class="category-card-image">
+                        <img src="assets/hero-cupcakes-card.png" alt="Cupcakes">
+                        <div class="category-card-overlay"></div>
+                    </div>
+                    <div class="category-card-body">
+                        <span class="category-accent" style="color: var(--color-category-cupcakes);">🧁</span>
+                        <h3>Cupcakes</h3>
+                        <p>Swirled frosting, moist crumb. Celebrations in every bite.</p>
+                        <span class="category-cta">Shop Cupcakes →</span>
+                    </div>
+                </a>
+
+                <!-- Celebration Cakes -->
+                <a href="categories/celebration-cakes.html" class="category-card reveal-item" data-category="cakes">
+                    <div class="category-card-image">
+                        <img src="assets/hero-celebration-cakes-card.png" alt="Celebration Cakes">
+                        <div class="category-card-overlay"></div>
+                    </div>
+                    <div class="category-card-body">
+                        <span class="category-accent" style="color: var(--color-category-cakes);">🎂</span>
+                        <h3>Celebration Cakes</h3>
+                        <p>Custom, dramatic, and made for the moments that matter most.</p>
+                        <span class="category-cta">Order a Cake →</span>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Section 1: The Craft (Scroll-Driven Sticky Experience) -->
-    <section id="craft" class="craft-scroll-section">
-        <!-- Sticky Container -->
-        <div class="craft-sticky-container">
-            <!-- Background Image (stays fixed during scroll) -->
-            <div class="craft-bg-image">
-                <img src="assets/Gemini_Generated_Image_wnwhmdwnwhmdwnwh.png" alt="Handcrafted ingredients">
+    <!-- ═══════════════════════════════════════════════════════════════
+         THE CRAFT — Bento Section
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="craft" class="section-bento reveal-section">
+        <div class="container">
+            <div class="bento-header reveal-item"
+                style="text-align: center; max-width: 800px; margin: 0 auto var(--space-10) auto;">
+                <span class="section-label" style="justify-content: center;">For Artisanal Appreciators</span>
+                <h2 class="section-title">Slow Indulgence</h2>
+                <p class="section-subtitle">Every bake tells a story of patience, passion, and fine ingredients.</p>
             </div>
 
-            <!-- Dark Overlay for Text Readability -->
-            <div class="craft-overlay"></div>
-
-            <!-- Section Header (shows first) -->
-            <div class="craft-header-panel craft-panel" data-panel="0">
-                <span class="section-label light">For Artisanal Appreciators</span>
-                <h2 class="section-title light">The Craft</h2>
-                <p class="section-subtitle light">Every cookie tells a story of patience, passion, and the finest
-                    ingredients.</p>
-            </div>
-
-            <!-- Craft Point 1 -->
-            <div class="craft-point-panel craft-panel" data-panel="1">
-                <div class="craft-point-content">
-                    <span class="craft-point-number">01</span>
-                    <h3>Real Butter, Always</h3>
-                    <p>We never compromise. Real butter creates that perfect melt-in-your-mouth texture you can taste in
-                        every bite.</p>
+            <div class="bento-grid">
+                <div class="bento-image-container reveal-item">
+                    <img src="assets/Gemini_Generated_Image_wnwhmdwnwhmdwnwh.png" alt="Handcrafted ingredients"
+                        class="bento-image">
                 </div>
-            </div>
-
-            <!-- Craft Point 2 -->
-            <div class="craft-point-panel craft-panel" data-panel="2">
-                <div class="craft-point-content">
-                    <span class="craft-point-number">02</span>
-                    <h3>No Preservatives</h3>
-                    <p>Our cookies are baked fresh and meant to be enjoyed fresh. No artificial preservatives, ever.</p>
-                </div>
-            </div>
-
-            <!-- Craft Point 3 -->
-            <div class="craft-point-panel craft-panel" data-panel="3">
-                <div class="craft-point-content">
-                    <span class="craft-point-number">03</span>
-                    <h3>Small Batch Love</h3>
-                    <p>Each batch is crafted by hand in small quantities. Quality over quantity, always.</p>
+                <div class="bento-content">
+                    <div class="bento-card reveal-item">
+                        <span class="bento-number">01</span>
+                        <h3>Real Butter, Always</h3>
+                        <p>We never compromise. Real butter creates that perfect melt-in-your-mouth texture you'll taste
+                            in every bite.</p>
+                    </div>
+                    <div class="bento-card reveal-item">
+                        <span class="bento-number">02</span>
+                        <h3>No Preservatives</h3>
+                        <p>Our bakes are made fresh and meant to be enjoyed fresh. No artificial preservatives, ever.
+                        </p>
+                    </div>
+                    <div class="bento-card reveal-item">
+                        <span class="bento-number">03</span>
+                        <h3>Small Batch Love</h3>
+                        <p>Each batch is crafted by hand in small quantities. Quality over quantity, always.</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Scroll Spacer (creates scroll distance for the panels) -->
-        <div class="craft-scroll-spacer"></div>
     </section>
 
-    <!-- Artisan Favorites (After sticky section) -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         ARTISAN FAVORITES — Dynamic from Shopify
+    ═══════════════════════════════════════════════════════════════ -->
     <section class="section section-artisan-favorites">
         <div class="container">
             <h3 class="featured-label">Artisan Favorites</h3>
             <div class="product-row">
+                <!-- Cards injected by script.js via Shopify -->
                 <div class="product-card reveal-item">
                     <div class="product-image">
-                        <img src="assets/Tin/Ginger/1.jpg" alt="Ginger Cardamom Rose Cookie">
+                        <img src="assets/Tin/Ginger/1.jpg" alt="Persian Love Cookie">
                         <span class="product-badge">Signature</span>
                     </div>
                     <div class="product-info">
@@ -176,7 +315,7 @@
                 </div>
                 <div class="product-card reveal-item">
                     <div class="product-image">
-                        <img src="assets/Tin/Lemon Crinkle/1.jpg" alt="Lemon Crinkle Cookie">
+                        <img src="assets/Tin/Lemon Crinkle/1.jpg" alt="Ginger Cardamom Rose Cookie">
                     </div>
                     <div class="product-info">
                         <h4>Ginger Cardamom Rose</h4>
@@ -199,7 +338,68 @@
         </div>
     </section>
 
-    <!-- Section 2: Indulge Without Regret -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         SHOP BY VIBE — Persona Links
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="vibe" class="section section-vibe reveal-section" style="background: var(--color-warm-white);">
+        <div class="container">
+            <div class="section-header reveal-item" style="text-align:center; margin-bottom: var(--space-12);">
+                <span class="section-label" style="justify-content:center;">Find Your Match</span>
+                <h2 class="section-title">Shop By Vibe</h2>
+                <p class="section-subtitle">Curated collections based on what you're craving right now.</p>
+            </div>
+
+            <div class="vibe-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6);">
+                <a href="personas/health-conscious.html" class="vibe-card reveal-item" style="display: block; background: var(--color-cream); border-radius: var(--radius-lg); overflow: hidden; transition: transform var(--transition-base);">
+                    <div class="vibe-image" style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
+                        <img src="assets/hero-cookies.png" alt="Clean Indulgence" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="vibe-badge" style="position: absolute; top: var(--space-4); left: var(--space-4); background: #4ECF9C; color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-micro); font-weight: 500;">Health-Conscious</div>
+                    </div>
+                    <div class="vibe-info" style="padding: var(--space-6);">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-warm-black);">Clean Indulgence</h3>
+                        <p style="font-size: var(--text-small); color: var(--color-text-secondary); margin-bottom: 0;">Real ingredients. No preservatives. Guilt-free bakes.</p>
+                    </div>
+                </a>
+
+                <a href="personas/young-adults.html" class="vibe-card reveal-item" style="display: block; background: var(--color-cream); border-radius: var(--radius-lg); overflow: hidden; transition: transform var(--transition-base);">
+                    <div class="vibe-image" style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
+                        <img src="assets/hero-doughnuts.png" alt="Trending Bakes" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="vibe-badge" style="position: absolute; top: var(--space-4); left: var(--space-4); background: #9B6DD7; color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-micro); font-weight: 500;">Trending</div>
+                    </div>
+                    <div class="vibe-info" style="padding: var(--space-6);">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-warm-black);">The Main Character</h3>
+                        <p style="font-size: var(--text-small); color: var(--color-text-secondary); margin-bottom: 0;">Insta-worthy, bold flavors you've been seeing everywhere.</p>
+                    </div>
+                </a>
+
+                <a href="personas/celebrations.html" class="vibe-card reveal-item" style="display: block; background: var(--color-cream); border-radius: var(--radius-lg); overflow: hidden; transition: transform var(--transition-base);">
+                    <div class="vibe-image" style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
+                        <img src="assets/hero-celebration-cakes.png" alt="Party Treats" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="vibe-badge" style="position: absolute; top: var(--space-4); left: var(--space-4); background: #E87C5E; color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-micro); font-weight: 500;">Parties</div>
+                    </div>
+                    <div class="vibe-info" style="padding: var(--space-6);">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-warm-black);">Celebration Ready</h3>
+                        <p style="font-size: var(--text-small); color: var(--color-text-secondary); margin-bottom: 0;">Cakes, platters, and boxes that steal the show.</p>
+                    </div>
+                </a>
+
+                <a href="personas/kids-family.html" class="vibe-card reveal-item" style="display: block; background: var(--color-cream); border-radius: var(--radius-lg); overflow: hidden; transition: transform var(--transition-base);">
+                    <div class="vibe-image" style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
+                        <img src="assets/hero-cupcakes.png" alt="Family Treats" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="vibe-badge" style="position: absolute; top: var(--space-4); left: var(--space-4); background: #F5C842; color: var(--color-warm-black); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-micro); font-weight: 500;">Family</div>
+                    </div>
+                    <div class="vibe-info" style="padding: var(--space-6);">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: var(--space-2); color: var(--color-warm-black);">Kid-Approved</h3>
+                        <p style="font-size: var(--text-small); color: var(--color-text-secondary); margin-bottom: 0;">Fun treats they'll love, clean ingredients you'll trust.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         INDULGE WITHOUT REGRET — Dark Section
+    ═══════════════════════════════════════════════════════════════ -->
     <section id="indulge" class="section section-indulge">
         <div class="indulge-dark-bg" data-parallax-container>
             <div class="container">
@@ -210,18 +410,18 @@
                 </div>
 
                 <div class="indulge-hero reveal-item">
-                    <img src="assets/dark-indulgence.png" alt="Double chocolate cookies with drizzle"
-                        class="indulge-image" data-parallax="0.1">
+                    <img src="assets/dark-indulgence.png" alt="Indulgent baked goods with drizzle" class="indulge-image"
+                        data-parallax="0.1">
                 </div>
 
                 <div class="dual-message">
                     <div class="message-card indulgence-card reveal-item">
                         <h3>Pure Indulgence</h3>
-                        <p>Life's too short for boring cookies. Double chocolate, brownbutter toffee, decadent fillings.
-                        </p>
+                        <p>Life's too short for boring bakes. Double chocolate doughnuts, brownbutter toffee cookies,
+                            bomboloni with custard fills.</p>
                         <ul class="feature-list">
                             <li>Rich, bold flavors</li>
-                            <li>Premium chocolate</li>
+                            <li>Premium quality chocolate</li>
                             <li>Handcrafted perfection</li>
                         </ul>
                     </div>
@@ -240,7 +440,9 @@
         </div>
     </section>
 
-    <!-- Section 3: Gift Something Special -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         GIFTING + CORPORATE
+    ═══════════════════════════════════════════════════════════════ -->
     <section id="gifts" class="section section-gifts reveal-section">
         <div class="container">
             <div class="section-header reveal-item">
@@ -252,32 +454,34 @@
             <div class="gift-categories">
                 <div class="gift-card reveal-item">
                     <div class="gift-image">
-                        <img src="assets/Gemini_Generated_Image_3albke3albke3alb.png" alt="FOMO Cookie Gift Box">
+                        <img src="assets/Gemini_Generated_Image_3albke3albke3alb.png" alt="FOMO Bakery Gift Box">
                     </div>
                     <div class="gift-info">
-                        <h3>Cookie Gift Boxes</h3>
-                        <p>Curated assortments of our finest cookies, beautifully packaged.</p>
-                        <a href="#" class="btn btn-outline">Explore Boxes</a>
+                        <h3>Gift Boxes</h3>
+                        <p>Curated assortments of our finest bakes, beautifully packaged.</p>
+                        <a href="gifts/index.html" class="btn btn-outline">Explore Boxes</a>
                     </div>
                 </div>
                 <div class="gift-card corporate reveal-item">
                     <div class="gift-content">
                         <div class="gift-icon">✦</div>
                         <h3>Corporate Gifting</h3>
-                        <p>Delight clients and employees with premium cookie hampers.</p>
-                        <a href="#contact" class="btn btn-light">Enquire Now</a>
+                        <p>Delight clients and teams with premium bakery hampers. GST invoices available.</p>
+                        <a href="pages/corporate.html" class="btn btn-light">Enquire Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- All Cookies Grid -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         BESTSELLERS GRID — Dynamic from Shopify
+    ═══════════════════════════════════════════════════════════════ -->
     <section id="cookies" class="section section-all-cookies reveal-section">
         <div class="container">
             <div class="section-header reveal-item">
-                <h2 class="section-title">Meet Our Cookies</h2>
-                <p class="section-subtitle">Every cookie, crafted with intention.</p>
+                <h2 class="section-title">Bestsellers</h2>
+                <p class="section-subtitle">Every bake, crafted with intention.</p>
             </div>
 
             <div class="cookie-grid">
@@ -335,7 +539,9 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════════════════════════ -->
     <section class="section section-testimonials reveal-section">
         <div class="container">
             <div class="section-header reveal-item">
@@ -351,16 +557,16 @@
                     </div>
                 </div>
                 <div class="testimonial-card reveal-item">
-                    <p>"Finally, cookies I can enjoy without worrying about artificial ingredients. My go-to for client
-                        gifts!"</p>
+                    <p>"Finally, a bakery I can trust for corporate gifting. Premium quality, beautiful packaging, GST
+                        invoice — everything we needed."</p>
                     <div class="testimonial-author">
                         <strong>Rahul K.</strong>
                         <span>Koramangala</span>
                     </div>
                 </div>
                 <div class="testimonial-card reveal-item">
-                    <p>"The black sesame camomile honey is genius. Creative, delicious, and absolutely
-                        Instagram-worthy."</p>
+                    <p>"The bomboloni are insane. Tried the Nutella fill and I've ordered three more times since. Worth
+                        every rupee."</p>
                     <div class="testimonial-author">
                         <strong>Ananya S.</strong>
                         <span>Indiranagar</span>
@@ -370,21 +576,24 @@
         </div>
     </section>
 
-    <!-- Contact/Order Section -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         CONTACT / ORDER SECTION
+    ═══════════════════════════════════════════════════════════════ -->
     <section id="order" class="section section-contact">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info reveal-item">
                     <h2>Ready to taste the craft?</h2>
-                    <p>We deliver fresh across Bangalore. Order via WhatsApp or visit our shop.</p>
+                    <p>We deliver fresh across Bangalore. Order via WhatsApp or explore our full menu.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <span class="contact-label">WhatsApp</span>
-                            <a href="#">+91 XXXXX XXXXX</a>
+                            <!-- TODO: Replace with real WhatsApp number -->
+                            <a href="https://wa.me/91XXXXXXXXXX">+91 XXXXX XXXXX</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-label">Instagram</span>
-                            <a href="#">@fomocookies</a>
+                            <a href="https://instagram.com/fomobakery" target="_blank">@fomobakery</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-label">Location</span>
@@ -393,7 +602,7 @@
                     </div>
                 </div>
                 <div class="contact-cta reveal-item">
-                    <a href="#" class="btn btn-whatsapp">
+                    <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-whatsapp">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -405,39 +614,156 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══════════════════════════════════════════════════════════════
+         INSTAGRAM STRIP
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="section section-instagram reveal-section">
+        <div class="container">
+            <div class="insta-header reveal-item">
+                <span class="insta-handle">@fomobakery</span>
+                <h2>Daily Freshness</h2>
+            </div>
+        </div>
+        <div class="insta-grid">
+            <a href="https://instagram.com/fomobakery" target="_blank" class="insta-item reveal-item">
+                <img src="assets/Pouch/Choco-chip/1.jpg" alt="Instagram Post">
+                <div class="insta-overlay"><span class="insta-icon">♥</span></div>
+            </a>
+            <a href="https://instagram.com/fomobakery" target="_blank" class="insta-item reveal-item">
+                <img src="assets/Tin/Double Chocolate/1.jpg" alt="Instagram Post">
+                <div class="insta-overlay"><span class="insta-icon">♥</span></div>
+            </a>
+            <a href="https://instagram.com/fomobakery" target="_blank" class="insta-item reveal-item">
+                <img src="assets/Tin/Ginger/1.jpg" alt="Instagram Post">
+                <div class="insta-overlay"><span class="insta-icon">♥</span></div>
+            </a>
+            <a href="https://instagram.com/fomobakery" target="_blank" class="insta-item reveal-item">
+                <img src="assets/Pouch/Lemon Crinkle/1.jpg" alt="Instagram Post">
+                <div class="insta-overlay"><span class="insta-icon">♥</span></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="assets/fomo-logo.png" alt="FOMO Cookies" class="logo-img footer-logo">
+                        <img src="assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img footer-logo">
                     </div>
-                    <p>Handcrafted cookies made with love in Bangalore. No shortcuts. No preservatives.</p>
+                    <p>Handcrafted doughnuts, bomboloni, cookies, cupcakes &amp; more — made fresh in Bangalore.<br>Real
+                        butter. No preservatives.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Categories</h4>
                     <ul>
-                        <li><a href="#craft">The Craft</a></li>
-                        <li><a href="#cookies">Our Cookies</a></li>
-                        <li><a href="#gifts">Gifts</a></li>
-                        <li><a href="#order">Order</a></li>
+                        <li><a href="categories/doughnuts.html">Doughnuts</a></li>
+                        <li><a href="categories/bomboloni.html">Bomboloni</a></li>
+                        <li><a href="categories/cookies.html">Cookies</a></li>
+                        <li><a href="categories/cupcakes.html">Cupcakes</a></li>
+                        <li><a href="categories/celebration-cakes.html">Celebration Cakes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="craft/index.html">The Craft</a></li>
+                        <li><a href="indulge/index.html">Indulge</a></li>
+                        <li><a href="gifts/index.html">Gifts</a></li>
+                        <li><a href="pages/occasions.html">Occasions</a></li>
+                        <li><a href="pages/corporate.html">Corporate Orders</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Policies</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="policies/privacy.html">Privacy Policy</a></li>
+                        <li><a href="policies/refund.html">Refund Policy</a></li>
+                        <li><a href="policies/shipping.html">Shipping Policy</a></li>
+                        <li><a href="policies/terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 FOMO Cookies. All rights reserved.</p>
+                <p>&copy; 2026 FOMO Bakery. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/fomobakery" target="_blank">Instagram</a>
+                    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-backdrop"></div>
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Box</h3>
+            <button class="cart-close" aria-label="Close cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items">
+            <div class="cart-empty-state">
+                <p>Your box is empty. Time to indulge?</p>
+                <button class="btn btn-outline" onclick="document.querySelector('.cart-close').click()">Start
+                    Shopping</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="total-amount">₹0</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-block checkout-btn">Checkout →</a>
+        </div>
+    </div>
+
+    <!-- Product Detail View (Full Screen) -->
+    <div class="product-view-overlay">
+        <button class="product-view-close" aria-label="Close product view">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="product-view-content">
+            <div class="pv-hero-image-container">
+                <img src="" alt="" class="pv-hero-image">
+                <div class="pv-gallery"></div>
+            </div>
+            <div class="pv-details">
+                <span class="pv-vendor">FOMO Bakery</span>
+                <h2 class="pv-title"></h2>
+                <div class="pv-price-wrapper">
+                    <span class="pv-compare-price"></span>
+                    <span class="pv-price"></span>
+                    <span class="pv-sale-badge">Sale</span>
+                </div>
+                <p class="pv-tax-note">Taxes included. <a href="#">Shipping</a> calculated at checkout.</p>
+                <div class="pv-variants"></div>
+                <div class="pv-quantity-wrapper">
+                    <span class="pv-quantity-label">Quantity</span>
+                    <div class="pv-quantity-selector">
+                        <button class="pv-quantity-btn" id="qty-minus">-</button>
+                        <input type="text" class="pv-quantity-input" id="qty-input" value="1" readonly>
+                        <button class="pv-quantity-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+                <div class="pv-actions">
+                    <button class="btn btn-large btn-block pv-add-btn">Add to cart</button>
+                    <button class="btn btn-large btn-block pv-buy-now-btn">Buy it now</button>
+                </div>
+                <div class="pv-description"></div>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="./script.js"></script>
 </body>

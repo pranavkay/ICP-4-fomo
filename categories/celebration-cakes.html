@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-39E6NXKX8R"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-39E6NXKX8R');</script>
+    <!-- Title and description injected by page config JS -->
+    <title>FOMO Bakery</title>
+    <meta name="description" content="FOMO Bakery — artisanal baked goods in Bangalore.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Celebration Cakes | FOMO Bakery Bangalore">
+    <meta property="og:description" content="FOMO Bakery — artisanal baked goods in Bangalore.">
+    <meta property="og:image" content="https://fomobakery.com/public/assets/hero-celebration-cakes.png">
+    <meta property="og:url" content="https://fomobakery.com/categories/celebration-cakes">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../cart.css">
+    <link rel="stylesheet" href="../product-view.css">
+    <link rel="stylesheet" href="category-styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../craft/index.html">The Craft</a></li>
+                <li><a href="../indulge/index.html">Indulge</a></li>
+                <li><a href="../gifts/index.html">Gifts</a></li>
+                <li><a href="../index.html#categories">Shop</a></li>
+            </ul>
+            <a href="../index.html#order" class="nav-cta">Order Now</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-nav-panel" id="mobile-nav-panel">
+            <ul>
+                <li><a href="../craft/index.html">The Craft</a></li>
+                <li><a href="../indulge/index.html">Indulge</a></li>
+                <li><a href="../gifts/index.html">Gifts</a></li>
+                <li><a href="../index.html#categories">Shop</a></li>
+                <li><a href="../index.html#order" class="mobile-nav-cta">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════
+         CATEGORY HERO — Filled by JS page config
+    ═══════════════════════════════════════════════════ -->
+    <section class="page-hero" id="category-hero">
+        <div class="page-hero-bg">
+            <img src="" alt="" class="page-hero-image" id="hero-img">
+        </div>
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <span class="category-label" id="category-label"></span>
+            <h1 class="page-hero-title" id="category-title"></h1>
+            <p class="page-hero-subtitle" id="category-subtitle"></p>
+            <a href="#products" class="btn btn-glow btn-large">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         STORY STRIP — 3 callouts
+    ═══════════════════════════════════════════════════ -->
+    <section class="story-strip section">
+        <div class="container">
+            <div class="story-points" id="story-points">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         PRODUCT COLLECTION — Dynamic from Shopify
+    ═══════════════════════════════════════════════════ -->
+    <section id="products" class="section section-products">
+        <div class="container">
+            <div class="section-header reveal-item" style="text-align:center; margin-bottom: var(--space-10);">
+                <h2 class="section-title" id="products-heading">Our Range</h2>
+                <p class="section-subtitle" id="products-subheading">Every item crafted by hand, in small batches.</p>
+            </div>
+            <div class="product-row" id="category-products">
+                <!-- Loading state -->
+                <div class="product-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading fresh bakes...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         CROSS-SELL PROMPT
+    ═══════════════════════════════════════════════════ -->
+    <section class="cross-sell-section section">
+        <div class="container">
+            <div class="cross-sell-header reveal-item">
+                <p class="cross-sell-label">You might also love…</p>
+            </div>
+            <div class="cross-sell-grid" id="cross-sell-grid">
+                <!-- Injected by JS from CONFIG.crossSell -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         CTA BLOCK
+    ═══════════════════════════════════════════════════ -->
+    <section class="category-cta-section">
+        <div class="category-cta-bg" id="cta-bg">
+            <img src="" alt="" id="cta-img">
+        </div>
+        <div class="category-cta-overlay"></div>
+        <div class="container">
+            <div class="category-cta-content reveal-item">
+                <h2 id="cta-title">Order Yours Today</h2>
+                <p id="cta-subtitle">Fresh. Handcrafted. Delivered to your door in Bangalore.</p>
+                <div class="category-cta-buttons">
+                    <a href="../index.html#order" class="btn btn-glow btn-large">Order Now</a>
+                    <a href="../gifts/index.html" class="btn btn-ghost btn-large">Gift This</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img footer-logo">
+                    </div>
+                    <p>Handcrafted doughnuts, bomboloni, cookies, cupcakes &amp; more — made fresh in Bangalore.<br>Real
+                        butter. No preservatives.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="doughnuts.html">Doughnuts</a></li>
+                        <li><a href="bomboloni.html">Bomboloni</a></li>
+                        <li><a href="cookies.html">Cookies</a></li>
+                        <li><a href="cupcakes.html">Cupcakes</a></li>
+                        <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="../craft/index.html">The Craft</a></li>
+                        <li><a href="../indulge/index.html">Indulge</a></li>
+                        <li><a href="../gifts/index.html">Gifts</a></li>
+                        <li><a href="../index.html#order">Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="../policies/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../policies/refund.html">Refund Policy</a></li>
+                        <li><a href="../policies/shipping.html">Shipping Policy</a></li>
+                        <li><a href="../policies/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FOMO Bakery. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/fomobakery" target="_blank">Instagram</a>
+                    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-backdrop"></div>
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Box</h3>
+            <button class="cart-close" aria-label="Close cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items">
+            <div class="cart-empty-state">
+                <p>Your box is empty. Time to indulge?</p>
+                <button class="btn btn-outline" onclick="window.closeCart()">Start Shopping</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="total-amount">₹0</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-block checkout-btn">Checkout →</a>
+        </div>
+    </div>
+
+    <!-- Product View Overlay -->
+    <div class="product-view-overlay">
+        <button class="product-view-close" aria-label="Close product view">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="product-view-content">
+            <div class="pv-hero-image-container">
+                <img src="" alt="" class="pv-hero-image">
+                <div class="pv-gallery"></div>
+            </div>
+            <div class="pv-details">
+                <span class="pv-vendor">FOMO Bakery</span>
+                <h2 class="pv-title"></h2>
+                <div class="pv-price-wrapper">
+                    <span class="pv-compare-price"></span>
+                    <span class="pv-price"></span>
+                    <span class="pv-sale-badge">Sale</span>
+                </div>
+                <p class="pv-tax-note">Taxes included.</p>
+                <div class="pv-variants"></div>
+                <div class="pv-quantity-wrapper">
+                    <span class="pv-quantity-label">Quantity</span>
+                    <div class="pv-quantity-selector">
+                        <button class="pv-quantity-btn" id="qty-minus">-</button>
+                        <input type="text" class="pv-quantity-input" id="qty-input" value="1" readonly>
+                        <button class="pv-quantity-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+                <div class="pv-actions">
+                    <button class="btn btn-large btn-block pv-add-btn">Add to cart</button>
+                    <button class="btn btn-large btn-block pv-buy-now-btn">Buy it now</button>
+                </div>
+                <div class="pv-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page config is set BEFORE the main JS module loads -->
+    <script>
+        window.CATEGORY_CONFIG = {
+            title: 'Custom Celebration Cakes',
+            metaDescription: 'FOMO Bakery celebration cakes — custom, dramatic, handcrafted for birthdays, weddings, and special occasions in Bangalore.',
+            heroImage: '../assets/hero-celebration-cakes.png',
+            heroAlt: 'Celebration cakes at FOMO Bakery',
+            label: 'Custom Celebration Cakes',
+            heading: 'Built for the Moments That Matter.',
+            subtitle: 'Dramatic tiers, hand-painted details, and flavour profiles that match the occasion. Nothing ordinary here.',
+            accentColor: 'var(--color-category-cakes)',
+            story: [
+                { icon: '🎂', title: 'Fully Custom', text: 'Every cake is designed with you — flavour, design, size, number of tiers, decoration style.' },
+                { icon: '🎨', title: 'Artisan Decoration', text: 'Hand-painted fondant, fresh flower arrangements, sculpted sugar work — all by our bakers.' },
+                { icon: '✅', title: 'Minimum 3 Days Notice', text: 'Quality takes time. We require advance notice for all custom cakes. Contact us via WhatsApp to start.' }
+            ],
+            collectionHandle: 'celebration-cakes',
+            productsHeading: 'Our Cakes',
+            productsSubheading: 'Every cake is a statement. Order yours today.',
+            crossSell: [
+                { label: 'Cupcakes', href: 'cupcakes.html', image: '../assets/Gemini_Generated_Image_odib05odib05odib.png', alt: 'Cupcakes' },
+                { label: 'Gift Boxes', href: '../gifts/index.html', image: '../assets/Gemini_Generated_Image_3albke3albke3alb.png', alt: 'Gift Boxes' },
+                { label: 'Cookies', href: 'cookies.html', image: '../assets/Pouch/Choco-chip/1.jpg', alt: 'Cookies' }
+            ],
+            ctaTitle: 'Start Your Cake Design',
+            ctaSubtitle: 'DM us on Instagram or WhatsApp to begin the design process.',
+            ctaImage: '../assets/hero-celebration-cakes.png'
+        };
+    </script>
+    <script type="module" src="../src/pages/category-page.js"></script>
+</body>
+
+</html>

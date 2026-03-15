@@ -1,0 +1,517 @@
+/* ==========================================================================
+   FOMO Bakery — Shared Persona Page Styles
+   Used by: health-conscious, young-adults, celebrations, kids-family
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Persona Accent Colors (override via body class)
+   -------------------------------------------------------------------------- */
+.persona-health {
+    --persona-accent: #4ECF9C;
+    --persona-accent-soft: rgba(78, 207, 156, 0.12);
+}
+
+.persona-social {
+    --persona-accent: #9B6DD7;
+    --persona-accent-soft: rgba(155, 109, 215, 0.12);
+}
+
+.persona-celebrations {
+    --persona-accent: #E87C5E;
+    --persona-accent-soft: rgba(232, 124, 94, 0.12);
+}
+
+.persona-kids {
+    --persona-accent: #F5C842;
+    --persona-accent-soft: rgba(245, 200, 66, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   Persona Hero
+   -------------------------------------------------------------------------- */
+.persona-hero {
+    position: relative;
+    min-height: var(--hero-min-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.persona-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.persona-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.persona-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(180deg,
+            rgba(26, 20, 18, 0.5) 0%,
+            rgba(26, 20, 18, 0.3) 40%,
+            rgba(26, 20, 18, 0.75) 100%);
+}
+
+.persona-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    padding: var(--space-8);
+}
+
+.persona-hero-label {
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--persona-accent, var(--color-burnt-caramel));
+    display: block;
+    margin-bottom: var(--space-3);
+}
+
+.persona-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-5);
+}
+
+.persona-hero-title .highlight {
+    color: var(--persona-accent, var(--color-burnt-caramel));
+    font-style: italic;
+}
+
+.persona-hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: rgba(250, 249, 247, 0.88);
+    line-height: 1.7;
+    margin-bottom: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   Value Props Grid
+   -------------------------------------------------------------------------- */
+.persona-values {
+    background: var(--color-cream);
+    padding: var(--space-24) 0;
+}
+
+.persona-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.value-card {
+    background: var(--color-warm-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10);
+    text-align: center;
+    border: 1.5px solid transparent;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.value-card:hover {
+    border-color: var(--persona-accent, var(--color-soft-sand));
+    box-shadow: var(--shadow-md);
+}
+
+.value-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-5);
+    display: block;
+}
+
+.value-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-3);
+}
+
+.value-card p {
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Product Picks Strip
+   -------------------------------------------------------------------------- */
+.persona-picks {
+    padding: var(--space-24) 0;
+    background: var(--color-warm-white);
+}
+
+.persona-picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.pick-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-cream);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pick-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pick-card-image {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.pick-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.pick-card:hover .pick-card-image img {
+    transform: scale(1.06);
+}
+
+.pick-badge {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    background: var(--persona-accent, var(--color-burnt-caramel));
+    color: var(--color-warm-white);
+    font-family: var(--font-body);
+    font-size: var(--text-micro);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+}
+
+.pick-card-info {
+    padding: var(--space-5);
+}
+
+.pick-card-info h4 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-2);
+}
+
+.pick-card-info p {
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-3);
+}
+
+.pick-card-info .pick-price {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--color-warm-black);
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Trust / Social Proof Section
+   -------------------------------------------------------------------------- */
+.persona-proof {
+    position: relative;
+    padding: var(--space-24) 0;
+    overflow: hidden;
+}
+
+.persona-proof-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.persona-proof-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.persona-proof-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: rgba(26, 20, 18, 0.85);
+}
+
+.persona-proof .container {
+    position: relative;
+    z-index: 3;
+}
+
+.persona-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.proof-card {
+    background: rgba(250, 249, 247, 0.06);
+    border: 1px solid rgba(250, 249, 247, 0.1);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    transition: border-color var(--transition-base);
+}
+
+.proof-card:hover {
+    border-color: var(--persona-accent, rgba(250, 249, 247, 0.25));
+}
+
+.proof-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: rgba(250, 249, 247, 0.85);
+    line-height: 1.7;
+    margin-bottom: var(--space-5);
+    font-style: italic;
+}
+
+.proof-author {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.proof-name {
+    font-weight: 600;
+    font-size: var(--text-small);
+    color: var(--color-warm-white);
+}
+
+.proof-role {
+    font-size: var(--text-micro);
+    color: var(--persona-accent, var(--color-burnt-caramel));
+    letter-spacing: 0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   Final CTA
+   -------------------------------------------------------------------------- */
+.persona-cta {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.persona-cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.persona-cta-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.persona-cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(180deg,
+            rgba(26, 20, 18, 0.6) 0%,
+            rgba(26, 20, 18, 0.8) 100%);
+}
+
+.persona-cta-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 650px;
+    padding: var(--space-12) var(--space-8);
+}
+
+.persona-cta-content h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-4);
+}
+
+.persona-cta-content p {
+    font-size: 1.1rem;
+    color: rgba(250, 249, 247, 0.8);
+    line-height: 1.7;
+    margin-bottom: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   Highlight Section (used for transparency / trust blocks)
+   -------------------------------------------------------------------------- */
+.persona-highlight {
+    padding: var(--space-24) 0;
+}
+
+.persona-highlight.alt-bg {
+    background: var(--color-cream);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+}
+
+.highlight-card {
+    padding: var(--space-10);
+    border-radius: var(--radius-xl);
+}
+
+.highlight-card.positive {
+    background: var(--persona-accent-soft, rgba(78, 205, 156, 0.1));
+    border: 2px solid var(--persona-accent, rgba(78, 205, 156, 0.3));
+}
+
+.highlight-card.negative {
+    background: rgba(220, 80, 80, 0.06);
+    border: 2px solid rgba(220, 80, 80, 0.2);
+}
+
+.highlight-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-5);
+}
+
+.highlight-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.highlight-card li {
+    font-size: var(--text-body);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    padding-left: var(--space-6);
+    position: relative;
+}
+
+.highlight-card.positive li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--persona-accent, #4ECF9C);
+    font-weight: 700;
+}
+
+.highlight-card.negative li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: #DC5050;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   How-It-Works Steps
+   -------------------------------------------------------------------------- */
+.persona-steps {
+    padding: var(--space-24) 0;
+    background: var(--color-warm-white);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+}
+
+.step-card {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--persona-accent, var(--color-burnt-caramel));
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: var(--space-3);
+}
+
+.step-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-2);
+}
+
+.step-card p {
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+
+    .persona-values-grid,
+    .persona-picks-grid,
+    .persona-proof-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .persona-values-grid,
+    .persona-picks-grid,
+    .persona-proof-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .persona-hero-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .persona-hero-subtitle {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,475 @@
+/* ==========================================================================
+   FOMO Bakery — Occasions Hub Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Hero
+   -------------------------------------------------------------------------- */
+.page-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.page-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom,
+            rgba(26, 20, 18, 0.25) 0%,
+            rgba(26, 20, 18, 0.6) 50%,
+            rgba(26, 20, 18, 0.85) 100%);
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 860px;
+    padding: var(--space-8);
+    margin-top: 60px;
+}
+
+.page-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-burnt-caramel);
+    margin-bottom: var(--space-5);
+    opacity: 0.9;
+}
+
+.page-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-5);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(250, 249, 247, 0.85);
+    margin-bottom: var(--space-10);
+    line-height: 1.7;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Occasion Intro Strip
+   -------------------------------------------------------------------------- */
+.occasion-intro {
+    background: var(--color-warm-black);
+    padding: var(--space-6) 0;
+}
+
+.occasion-intro-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.occasion-pill {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: rgba(250, 249, 247, 0.7);
+    font-size: var(--text-small);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    cursor: pointer;
+}
+
+.occasion-pill:hover {
+    color: var(--color-burnt-caramel);
+}
+
+.occasion-pill-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-burnt-caramel);
+    border-radius: 50%;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Occasions Grid (Main)
+   -------------------------------------------------------------------------- */
+.occasions-section {
+    background: var(--color-cream);
+}
+
+.occasions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+/* Large card (birthday + corporate — spans 2 cols) */
+.occasion-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.occasion-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.occasion-card.card-large {
+    grid-column: span 2;
+    min-height: 460px;
+}
+
+.occasion-card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.occasion-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.occasion-card:hover .occasion-card-bg img {
+    transform: scale(1.04);
+}
+
+.occasion-card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to top,
+            rgba(26, 20, 18, 0.9) 0%,
+            rgba(26, 20, 18, 0.4) 50%,
+            rgba(26, 20, 18, 0.1) 100%);
+}
+
+.occasion-card-content {
+    position: relative;
+    z-index: 3;
+    padding: var(--space-8);
+    margin-top: auto;
+    color: var(--color-warm-white);
+}
+
+.occasion-card-emoji {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+    display: block;
+}
+
+.occasion-card-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-2);
+    line-height: 1.15;
+}
+
+.occasion-card.card-large .occasion-card-title {
+    font-size: 2.2rem;
+}
+
+.occasion-card-desc {
+    font-size: var(--text-small);
+    color: rgba(250, 249, 247, 0.8);
+    line-height: 1.6;
+    margin-bottom: var(--space-5);
+    max-width: 420px;
+}
+
+.occasion-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-small);
+    font-weight: 500;
+    color: var(--color-burnt-caramel);
+    letter-spacing: 0.04em;
+    transition: gap var(--transition-fast);
+}
+
+.occasion-card:hover .occasion-card-link {
+    gap: var(--space-3);
+}
+
+/* --------------------------------------------------------------------------
+   How It Works
+   -------------------------------------------------------------------------- */
+.how-it-works {
+    background: var(--color-warm-white);
+}
+
+.steps-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+    position: relative;
+}
+
+.steps-row::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: calc(12.5% + 12px);
+    right: calc(12.5% + 12px);
+    height: 1px;
+    background: var(--color-soft-sand);
+    z-index: 0;
+}
+
+.step-item {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-cream);
+    border: 2px solid var(--color-soft-sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-burnt-caramel);
+    margin: 0 auto var(--space-5);
+    transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.step-item:hover .step-number {
+    background: var(--color-burnt-caramel);
+    color: var(--color-warm-white);
+    border-color: var(--color-burnt-caramel);
+}
+
+.step-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-2);
+}
+
+.step-item p {
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Featured Products Strip
+   -------------------------------------------------------------------------- */
+.featured-products-section {
+    background: var(--color-cream);
+}
+
+.products-scroll {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.featured-product-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    transition: transform var(--transition-base);
+}
+
+.featured-product-card:hover {
+    transform: translateY(-4px);
+}
+
+.featured-product-img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--color-soft-sand);
+}
+
+.featured-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-product-card:hover .featured-product-img img {
+    transform: scale(1.05);
+}
+
+.featured-product-name {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-warm-black);
+}
+
+.featured-product-tag {
+    font-size: 0.72rem;
+    color: var(--color-burnt-caramel);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Final CTA
+   -------------------------------------------------------------------------- */
+.occasions-cta-section {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.occasions-cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.occasions-cta-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.occasions-cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: rgba(26, 20, 18, 0.68);
+}
+
+.occasions-cta-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--color-warm-white);
+    max-width: 700px;
+    padding: var(--space-8);
+}
+
+.occasions-cta-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-4);
+}
+
+.occasions-cta-content p {
+    font-size: var(--text-body);
+    color: rgba(250, 249, 247, 0.85);
+    margin-bottom: var(--space-8);
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .occasions-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .occasion-card.card-large {
+        grid-column: span 2;
+    }
+
+    .steps-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .steps-row::before {
+        display: none;
+    }
+
+    .products-scroll {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .occasions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .occasion-card.card-large {
+        grid-column: span 1;
+        min-height: 360px;
+    }
+
+    .steps-row {
+        grid-template-columns: 1fr;
+    }
+
+    .products-scroll {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .occasion-intro-inner {
+        gap: var(--space-4);
+    }
+}

@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Gift Boxes | Corporate Gifting | FOMO Cookies Bangalore</title>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-39E6NXKX8R"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-39E6NXKX8R');</script>
+    <title>Cookie Gift Boxes | Corporate Gifting | FOMO Bakery Bangalore</title>
     <meta name="description"
         content="Premium cookie gift boxes and corporate gifting solutions in Bangalore. Beautifully packaged handcrafted cookies for celebrations, Diwali, and special occasions.">
 
     <!-- SEO Keywords: cookie gift box Bangalore, corporate cookie gifts, premium cookie gifts -->
     <meta name="keywords"
         content="cookie gift box Bangalore, corporate cookie gifts, Diwali cookie hamper, birthday cake delivery Bangalore, premium cookie gifts">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cookie Gift Boxes | Corporate Gifting | FOMO Bakery Bangalore">
+    <meta property="og:description" content="Premium cookie gift boxes and corporate gifting solutions in Bangalore. Beautifully packaged handcrafted cookies for celebrations, Diwali, and special occasions.">
+    <meta property="og:image" content="https://fomobakery.com/public/assets/hero-cookies-category.png">
+    <meta property="og:url" content="https://fomobakery.com/gifts/">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Fonts: Fraunces + Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +30,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../cart.css">
+    <link rel="stylesheet" href="../product-view.css">
     <link rel="stylesheet" href="gifts-styles.css">
 </head>
 
@@ -28,7 +40,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">
-                <img src="../assets/fomo-logo.png" alt="FOMO Cookies" class="logo-img">
+                <img src="../assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="../craft/index.html">The Craft</a></li>
@@ -119,7 +131,7 @@
 
             <div class="gift-collections">
                 <!-- Signature Box -->
-                <div class="gift-collection-card reveal-item">
+                <div class="gift-collection-card reveal-item" data-title="Signature Box">
                     <div class="gift-collection-image">
                         <img src="../assets/Gemini_Generated_Image_3albke3albke3alb.png" alt="Signature Cookie Box">
                         <span class="gift-tag bestseller">Bestseller</span>
@@ -132,12 +144,12 @@
                             <span class="gift-count">6 Cookies</span>
                             <span class="gift-price">₹549</span>
                         </div>
-                        <a href="#order" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-primary add-to-cart-trigger">Add to Cart</a>
                     </div>
                 </div>
 
                 <!-- Artisan Collection -->
-                <div class="gift-collection-card reveal-item">
+                <div class="gift-collection-card reveal-item" data-title="Artisan Collection">
                     <div class="gift-collection-image">
                         <img src="../assets/Gemini_Generated_Image_suybmnsuybmnsuyb.png"
                             alt="Artisan Cookie Collection">
@@ -151,12 +163,12 @@
                             <span class="gift-count">8 Cookies</span>
                             <span class="gift-price">₹899</span>
                         </div>
-                        <a href="#order" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-primary add-to-cart-trigger">Add to Cart</a>
                     </div>
                 </div>
 
                 <!-- Chocolate Lover's Box -->
-                <div class="gift-collection-card reveal-item">
+                <div class="gift-collection-card reveal-item" data-title="Chocolate Lover's Box">
                     <div class="gift-collection-image">
                         <img src="../assets/dark-indulgence.png" alt="Chocolate Lover's Box">
                     </div>
@@ -167,7 +179,7 @@
                             <span class="gift-count">6 Cookies</span>
                             <span class="gift-price">₹549</span>
                         </div>
-                        <a href="#order" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-primary add-to-cart-trigger">Add to Cart</a>
                     </div>
                 </div>
             </div>
@@ -381,7 +393,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="../assets/fomo-logo.png" alt="FOMO Cookies" class="logo-img footer-logo">
+                        <img src="../assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img footer-logo">
                     </div>
                     <p>Handcrafted cookies made with love in Bangalore. No shortcuts. No preservatives.</p>
                 </div>
@@ -397,51 +409,150 @@
                 <div class="footer-links">
                     <h4>Policies</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="../policies/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../policies/refund.html">Refund Policy</a></li>
+                        <li><a href="../policies/shipping.html">Shipping Policy</a></li>
+                        <li><a href="../policies/terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 FOMO Cookies. All rights reserved.</p>
+                <p>&copy; 2026 FOMO Bakery. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Cart Drawer -->
+    <div class="cart-backdrop"></div>
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Box</h3>
+            <button class="cart-close" aria-label="Close cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="cart-items">
+            <!-- Dynamic Items will be rendered here -->
+            <div class="cart-empty-state">
+                <p>Your box is empty. Time to indulge?</p>
+                <button class="btn btn-outline" onclick="document.querySelector('.cart-close').click()">Start
+                    Shopping</button>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="total-amount">₹0</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-block checkout-btn">
+                Checkout ->
+            </a>
+        </div>
+    </div>
+
+    <!-- Product Detail View (Full Screen) -->
+    <div class="product-view-overlay">
+        <button class="product-view-close" aria-label="Close product view">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="product-view-content">
+            <div class="pv-hero-image-container">
+                <img src="" alt="" class="pv-hero-image">
+                <div class="pv-gallery"></div>
+            </div>
+            <div class="pv-details">
+                <span class="pv-vendor">FOMO Bakery</span>
+                <h2 class="pv-title"></h2>
+
+                <div class="pv-price-wrapper">
+                    <span class="pv-compare-price"></span>
+                    <span class="pv-price"></span>
+                    <span class="pv-sale-badge">Sale</span>
+                </div>
+                <p class="pv-tax-note">Taxes included. <a href="#">Shipping</a> calculated at checkout.</p>
+
+                <div class="pv-variants"></div>
+
+                <div class="pv-quantity-wrapper">
+                    <span class="pv-quantity-label">Quantity</span>
+                    <div class="pv-quantity-selector">
+                        <button class="pv-quantity-btn" id="qty-minus">-</button>
+                        <input type="text" class="pv-quantity-input" id="qty-input" value="1" readonly>
+                        <button class="pv-quantity-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+
+                <div class="pv-actions">
+                    <button class="btn btn-large btn-block pv-add-btn">Add to cart</button>
+                    <button class="btn btn-large btn-block pv-buy-now-btn">Buy it now</button>
+                </div>
+
+                <div class="pv-description"></div>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="../script.js"></script>
 
-    <!-- Form Handler -->
+    <!-- Form Handler: Shopify contact + WhatsApp -->
     <script>
-        document.getElementById('corporate-enquiry-form').addEventListener('submit', function (e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hidden iframe for Shopify form POST
+            const iframe = document.createElement('iframe');
+            iframe.name = 'shopify-form-target';
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
 
-            // Collect form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            document.getElementById('corporate-enquiry-form')?.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
 
-            // Build WhatsApp message
-            const message = `🏢 Corporate Enquiry from FOMO Website
-            
-Company: ${data.company}
-Contact: ${data.contact}
-Email: ${data.email}
-Phone: ${data.phone}
-Quantity: ${data.quantity}
-Occasion: ${data.occasion}
-Notes: ${data.message || 'None'}`;
+                // 1. Submit to Shopify contact form via hidden iframe
+                const shopifyForm = document.createElement('form');
+                shopifyForm.method = 'POST';
+                shopifyForm.action = 'https://fomobakery.myshopify.com/contact#contact_form';
+                shopifyForm.target = 'shopify-form-target';
+                shopifyForm.style.display = 'none';
 
-            // Open WhatsApp with pre-filled message
-            const whatsappURL = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(message)}`;
+                const body = `Gift/Corporate Enquiry\n\nCompany: ${data.company}\nContact: ${data.contact}\nEmail: ${data.email}\nPhone: ${data.phone}\nQuantity: ${data.quantity}\nOccasion: ${data.occasion}\n\nNotes: ${data.message || 'None'}`;
 
-            // Show success message
-            alert('Thank you for your enquiry! We will redirect you to WhatsApp to complete your request.');
+                const fields = {
+                    'contact[name]': data.contact || data.company,
+                    'contact[email]': data.email || `${data.phone}@enquiry.fomobakery.com`,
+                    'contact[phone]': data.phone,
+                    'contact[body]': body
+                };
 
-            // In production, replace with actual WhatsApp number
-            // window.open(whatsappURL, '_blank');
+                for (const [key, val] of Object.entries(fields)) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = val;
+                    shopifyForm.appendChild(input);
+                }
 
-            // For demo, just log
-            console.log('Corporate Enquiry:', data);
+                document.body.appendChild(shopifyForm);
+                shopifyForm.submit();
+                shopifyForm.remove();
+
+                // 2. GA4 event
+                if (typeof gtag === 'function') {
+                    gtag('event', 'form_submit', { form_name: 'gift_corporate_enquiry' });
+                }
+
+                // 3. WhatsApp redirect
+                const message = `🏢 Corporate Enquiry from FOMO Website\n\nCompany: ${data.company}\nContact: ${data.contact}\nEmail: ${data.email}\nPhone: ${data.phone}\nQuantity: ${data.quantity}\nOccasion: ${data.occasion}\nNotes: ${data.message || 'None'}`;
+                window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(message)}`, '_blank');
+            });
         });
     </script>
 </body>

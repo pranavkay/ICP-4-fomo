@@ -1,0 +1,344 @@
+/* --------------------------------------------------------------------------
+   Full-Screen Product View Styles
+   -------------------------------------------------------------------------- */
+.product-view-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-warm-white);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    /* transition handled by GSAP, but base state here */
+}
+
+.product-view-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-view-close {
+    position: fixed;
+    top: var(--space-4);
+    right: var(--space-4);
+    z-index: 10002;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-view-close:hover {
+    transform: scale(1.1);
+}
+
+.product-view-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* --- Hero Section & Gallery (The Image Stack) --- */
+.pv-hero-image-container {
+    width: 100%;
+    /* Mobile: Stack vertically */
+    height: auto;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding-bottom: var(--space-8);
+}
+
+.pv-hero-image,
+.pv-stack-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hide old gallery container */
+.pv-gallery {
+    display: none;
+}
+
+/* --- Details Section (Sticky Side) --- */
+.pv-details {
+    padding: var(--space-6);
+    background: white;
+    width: 100%;
+}
+
+.pv-vendor {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2);
+    letter-spacing: 0.05em;
+}
+
+.pv-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    /* Huge title like reference */
+    line-height: 1.1;
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-4);
+    font-weight: 500;
+}
+
+/* --- Pricing --- */
+.pv-price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-h3);
+}
+
+.pv-price {
+    color: var(--color-warm-black);
+    font-weight: 500;
+}
+
+.pv-compare-price {
+    color: var(--color-text-secondary);
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+
+.pv-sale-badge {
+    background: var(--color-warm-black);
+    color: white;
+    font-size: var(--text-xs);
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.pv-tax-note {
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.pv-tax-note a {
+    text-decoration: underline;
+}
+
+/* --- Variants --- */
+.pv-variants {
+    margin-bottom: var(--space-8);
+}
+
+.pv-variant-group {
+    margin-bottom: var(--space-4);
+}
+
+.pv-variant-label {
+    display: block;
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.pv-variant-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.pv-variant-pill {
+    padding: var(--space-3) var(--space-5);
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    /* Rounded based on reference */
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    transition: all 0.2s;
+    color: var(--color-text-primary);
+    min-width: 60px;
+    text-align: center;
+}
+
+.pv-variant-pill:hover {
+    border-color: var(--color-warm-black);
+}
+
+.pv-variant-pill.active {
+    border-color: var(--color-warm-black);
+    border-width: 1.5px;
+    color: var(--color-warm-black);
+}
+
+/* --- Quantity --- */
+.pv-quantity-wrapper {
+    margin-bottom: var(--space-8);
+}
+
+.pv-quantity-label {
+    display: block;
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.pv-quantity-selector {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-sm);
+    padding: var(--space-2);
+    width: 140px;
+    justify-content: space-between;
+}
+
+.pv-quantity-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 var(--space-2);
+    color: var(--color-text-primary);
+}
+
+.pv-quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: var(--text-body);
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background: transparent;
+}
+
+/* --- Description --- */
+.pv-description {
+    font-size: var(--text-small);
+    /* Smaller editorial text */
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-10);
+}
+
+.pv-description p {
+    margin-bottom: 1.5em;
+}
+
+/* --- Actions --- */
+.pv-actions {
+    position: sticky;
+    /* Sticky on mobile bottom if needed, usually fixed */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-4);
+    background: white;
+    border-top: 1px solid #f0f0f0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.pv-add-btn {
+    background: white;
+    color: var(--color-warm-black);
+    border: 1px solid var(--color-warm-black);
+    border-radius: var(--radius-full);
+    text-transform: none;
+    /* Reference is generic sentence case or capitalized, not UPPER */
+    font-weight: 500;
+}
+
+.pv-add-btn:hover {
+    background: #f9f9f9;
+}
+
+.pv-buy-now-btn {
+    background: var(--color-warm-black);
+    color: white;
+    border: 1px solid var(--color-warm-black);
+    border-radius: var(--radius-full);
+    text-transform: none;
+    font-weight: 500;
+}
+
+.pv-buy-now-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+
+/* --- Desktop Layout (Split & Sticky) --- */
+@media (min-width: 768px) {
+    .product-view-content {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+        /* Main container hide overflow */
+    }
+
+    .pv-hero-image-container {
+        width: 65%;
+        /* Editorial: Image dominant */
+        height: 100vh;
+        overflow-y: auto;
+        /* Independent scroll */
+        padding-bottom: 100px;
+        /* Hide scrollbar for cleaner look */
+        scrollbar-width: none;
+    }
+
+    .pv-hero-image-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pv-details {
+        width: 35%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* Align to top */
+        padding: var(--space-12) var(--space-10);
+        overflow-y: auto;
+        /* In case details are long */
+        background: white;
+        position: relative;
+        z-index: 2;
+    }
+
+    .pv-title {
+        margin-top: 0;
+    }
+
+    .pv-actions {
+        position: static;
+        padding: 0;
+        border: none;
+        margin-bottom: auto;
+        /* Push down */
+        margin-top: var(--space-8);
+    }
+}

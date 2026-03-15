@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-39E6NXKX8R"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-39E6NXKX8R');</script>
+    <title>Shop | FOMO Bakery</title>
+    <meta name="description" content="Browse our full collection of handcrafted artisanal cookies.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shop All | FOMO Bakery Bangalore">
+    <meta property="og:description" content="Browse our full range of artisanal baked goods.">
+    <meta property="og:image" content="https://fomobakery.com/assets/fomo-logo.png">
+    <meta property="og:url" content="https://fomobakery.com/shop/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts: Fraunces + Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared Styles (from root) -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../cart.css">
+    <link rel="stylesheet" href="../product-view.css">
+    <style>
+        /* Shop Specific Tweaks */
+        body {
+            padding-top: 80px;
+            /* Space for navbar */
+        }
+
+        .shop-header {
+            padding: var(--space-12) 0 var(--space-8);
+            text-align: center;
+        }
+
+        .shop-title {
+            font-size: var(--text-h1);
+            margin-bottom: var(--space-4);
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-8) var(--space-6);
+            padding-bottom: var(--space-24);
+        }
+
+        /* Adjust footer path since we are in subdirectory */
+    </style>
+</head>
+
+<body>
+    <!-- Navigation (Same as Home) -->
+    <nav class="navbar scrolled"> <!-- Always scrolled/visible on shop page -->
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../craft/index.html">The Craft</a></li>
+                <li><a href="../indulge/index.html">Indulge</a></li>
+                <li><a href="../gifts/index.html">Gifts</a></li>
+                <li><a href="../shop/index.html" style="color: var(--color-deep-chocolate);">Shop</a></li>
+            </ul>
+            <a href="#" class="nav-cta" onclick="window.openCart(); return false;">Box (<span
+                    class="cart-count">0</span>)</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <header class="shop-header">
+            <h1 class="shop-title">All Cookies</h1>
+            <p class="section-subtitle">Freshly baked, small batches.</p>
+        </header>
+
+        <!-- Search & Filter -->
+        <div class="shop-controls" style="max-width: 800px; margin: 0 auto 40px; text-align: center;">
+            <div class="search-wrapper" style="position: relative; margin-bottom: 20px;">
+                <input type="search" id="shop-search" placeholder="Search for flavors, ingredients..."
+                    style="width: 100%; padding: 12px 20px; border-radius: 30px; border: 1px solid #E8E2D9; font-family: 'Outfit'; font-size: 1rem;">
+                <span
+                    style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #6B5B4D;">🔍</span>
+            </div>
+
+            <div class="filter-pills" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="chocolate">Chocolate</button>
+                <button class="filter-btn" data-filter="fruit">Fruit</button>
+                <button class="filter-btn" data-filter="nuts">Nuts</button>
+                <button class="filter-btn" data-filter="eggless">Eggless</button>
+            </div>
+        </div>
+
+        <style>
+            .filter-btn {
+                padding: 8px 20px;
+                border-radius: 20px;
+                border: 1px solid #E8E2D9;
+                background: transparent;
+                color: #6B5B4D;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-family: 'Outfit';
+            }
+
+            .filter-btn:hover,
+            .filter-btn.active {
+                background: #2C1810;
+                color: #FAF9F7;
+                border-color: #2C1810;
+            }
+
+            .filter-btn.active {
+                box-shadow: 0 4px 12px rgba(44, 24, 16, 0.15);
+            }
+        </style>
+
+        <div class="shop-grid" id="shop-grid">
+            <!-- Products injected here -->
+            <div class="loading-state" style="grid-column: 1/-1; text-align: center; padding: 100px;">
+                <p>Loading fresh cookies...</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../assets/fomo-logo.png" alt="FOMO Bakery" class="logo-img footer-logo">
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../shop/index.html">Shop</a></li>
+                        <li><a href="../gifts/index.html">Gifts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="../policies/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../policies/refund.html">Refund Policy</a></li>
+                        <li><a href="../policies/shipping.html">Shipping Policy</a></li>
+                        <li><a href="../policies/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FOMO Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer (Shared) -->
+    <div class="cart-backdrop"></div>
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Box</h3>
+            <button class="cart-close" aria-label="Close cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="total-amount">₹0</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-block checkout-btn">Checkout -></a>
+        </div>
+    </div>
+
+    <!-- Product Detail View (Shared) -->
+    <div class="product-view-overlay">
+        <button class="product-view-close" aria-label="Close product view">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="product-view-content">
+            <div class="pv-hero-image-container">
+                <!-- Stack Images Injected Here -->
+            </div>
+            <div class="pv-details">
+                <span class="pv-vendor">FOMO Bakery</span>
+                <h2 class="pv-title"></h2>
+
+                <div class="pv-price-wrapper">
+                    <span class="pv-compare-price"></span>
+                    <span class="pv-price"></span>
+                    <span class="pv-sale-badge">Sale</span>
+                </div>
+                <p class="pv-tax-note">Taxes included. <a href="#">Shipping</a> calculated at checkout.</p>
+
+                <div class="pv-variants"></div>
+
+                <!-- Quantity -->
+                <div class="pv-quantity-wrapper">
+                    <span class="pv-quantity-label">Quantity</span>
+                    <div class="pv-quantity-selector">
+                        <button class="pv-quantity-btn" id="qty-minus">-</button>
+                        <input type="text" class="pv-quantity-input" id="qty-input" value="1" readonly>
+                        <button class="pv-quantity-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+
+                <div class="pv-actions">
+                    <button class="btn btn-large btn-block pv-add-btn">Add to cart</button>
+                    <button class="btn btn-large btn-block pv-buy-now-btn">Buy it now</button>
+                </div>
+
+                <div class="pv-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script: Point to root script.js but standard path resolution might fail if module not absolute. 
+         Better to use absolute path or adjusted relative path. 
+         Since script.js uses relative imports for 'src/lib/...', running it from /shop/ might break imports unless we use absolute paths in script.js or Vite handles it. 
+         Vite usually handles relative paths from the HTML entry point. 
+         So "../script.js" should work IF script.js imports are robust. 
+    -->
+    <script type="module" src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,544 @@
+/* ==========================================================================
+   FOMO Bakery — Corporate Orders Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Hero
+   -------------------------------------------------------------------------- */
+.page-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.page-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(135deg,
+            rgba(26, 20, 18, 0.75) 0%,
+            rgba(26, 20, 18, 0.45) 60%,
+            rgba(26, 20, 18, 0.65) 100%);
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 860px;
+    padding: var(--space-8);
+    margin-top: 60px;
+}
+
+.page-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-burnt-caramel);
+    margin-bottom: var(--space-5);
+    opacity: 0.9;
+}
+
+.page-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-5);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(250, 249, 247, 0.85);
+    margin-bottom: var(--space-10);
+    line-height: 1.7;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Trust Bar
+   -------------------------------------------------------------------------- */
+.trust-bar {
+    background: var(--color-warm-black);
+    padding: var(--space-5) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trust-bar-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: rgba(250, 249, 247, 0.75);
+    font-size: var(--text-small);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.trust-item-icon {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Benefits Section
+   -------------------------------------------------------------------------- */
+.benefits-section {
+    background: var(--color-cream);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+}
+
+.benefit-card {
+    background: var(--color-warm-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10) var(--space-8);
+    text-align: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-5);
+    line-height: 1;
+}
+
+.benefit-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-3);
+}
+
+.benefit-card p {
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   Packages Section
+   -------------------------------------------------------------------------- */
+.packages-section {
+    background: var(--color-warm-white);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.package-card {
+    border: 1.5px solid var(--color-soft-sand);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    position: relative;
+    transition: border-color var(--transition-base), transform var(--transition-base);
+    background: var(--color-warm-white);
+}
+
+.package-card:hover {
+    border-color: var(--color-burnt-caramel);
+    transform: translateY(-4px);
+}
+
+.package-card.featured {
+    border-color: var(--color-burnt-caramel);
+    background: var(--color-cream);
+}
+
+.package-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-burnt-caramel);
+    color: var(--color-warm-white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.package-name {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-2);
+}
+
+.package-size {
+    font-size: var(--text-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-6);
+    letter-spacing: 0.05em;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-8) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.package-features li {
+    font-size: var(--text-small);
+    color: var(--color-warm-black);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    line-height: 1.5;
+}
+
+.package-features li::before {
+    content: '✓';
+    color: var(--color-burnt-caramel);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   Enquiry Form Section
+   -------------------------------------------------------------------------- */
+.enquiry-section {
+    background: var(--color-cream);
+}
+
+.enquiry-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: var(--space-16);
+    align-items: start;
+    margin-top: var(--space-12);
+}
+
+.enquiry-info h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 500;
+    color: var(--color-warm-black);
+    margin-bottom: var(--space-5);
+    line-height: 1.15;
+}
+
+.enquiry-info p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-8);
+}
+
+.enquiry-contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--color-warm-black);
+    text-decoration: none;
+    font-size: var(--text-small);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--color-burnt-caramel);
+}
+
+.contact-link-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--color-soft-sand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.enquiry-form-card {
+    background: var(--color-warm-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+}
+
+.form-group label {
+    font-size: var(--text-small);
+    font-weight: 500;
+    color: var(--color-warm-black);
+    letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--color-soft-sand);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    color: var(--color-warm-black);
+    background: var(--color-cream);
+    outline: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-burnt-caramel);
+    box-shadow: 0 0 0 3px rgba(178, 110, 60, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+}
+
+.form-submit-btn {
+    width: 100%;
+    margin-top: var(--space-2);
+}
+
+.form-note {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-top: var(--space-4);
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Testimonials
+   -------------------------------------------------------------------------- */
+.testimonials-section {
+    background: var(--color-warm-black);
+    color: var(--color-warm-white);
+}
+
+.testimonials-section .section-title {
+    color: var(--color-warm-white);
+}
+
+.testimonials-section .section-subtitle {
+    color: rgba(250, 249, 247, 0.7);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    transition: background var(--transition-base);
+}
+
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.testimonial-quote {
+    font-size: var(--text-small);
+    line-height: 1.75;
+    color: rgba(250, 249, 247, 0.85);
+    margin-bottom: var(--space-6);
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.testimonial-name {
+    font-weight: 600;
+    font-size: var(--text-small);
+    color: var(--color-warm-white);
+}
+
+.testimonial-role {
+    font-size: 0.75rem;
+    color: var(--color-burnt-caramel);
+    letter-spacing: 0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   Final CTA Section
+   -------------------------------------------------------------------------- */
+.corporate-cta-section {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.corporate-cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.corporate-cta-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.corporate-cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: rgba(26, 20, 18, 0.72);
+}
+
+.corporate-cta-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--color-warm-white);
+    max-width: 700px;
+    padding: var(--space-8);
+}
+
+.corporate-cta-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-warm-white);
+    margin-bottom: var(--space-4);
+}
+
+.corporate-cta-content p {
+    font-size: var(--text-body);
+    color: rgba(250, 249, 247, 0.85);
+    margin-bottom: var(--space-8);
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+
+    .benefits-grid,
+    .packages-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .enquiry-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .benefits-grid,
+    .packages-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-bar-inner {
+        gap: var(--space-5);
+    }
+}
